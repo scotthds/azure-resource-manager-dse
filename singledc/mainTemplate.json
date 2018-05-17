@@ -83,7 +83,7 @@
       "defaultValue": "6.0.0",
       "allowedValues": [
         "6.0.0",
-        "5.1.7"
+        "5.1.9"
       ],
       "metadata": {
         "description": "Version of DSE to deploy"
