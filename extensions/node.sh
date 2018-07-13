@@ -39,10 +39,8 @@ wget https://github.com/DSPN/install-datastax-ubuntu/archive/$release.tar.gz
 tar -xvf $release.tar.gz
 
 cd install-datastax-ubuntu-$release/bin/
-# install extra packages
+# install extra packages, openjdk
 ./os/extra_packages.sh
-
-# install openjdk 8
 ./os/install_java.sh -o
 
 # grabbing metadata after extra_packages.sh to ensure we have jq

@@ -25,15 +25,12 @@ wget https://github.com/DSPN/install-datastax-ubuntu/archive/$release.tar.gz
 tar -xvf $release.tar.gz
 
 cd install-datastax-ubuntu-$release/bin
-# install extra packages
+# install extra packages, openjdk
 ./os/extra_packages.sh
+./os/install_java.sh -o
 
 # Overide OpsC install default version if needed
 export OPSC_VERSION='6.5.1'
-
-# install openjdk 8, must also call on nodes
-./os/install_java.sh -o
-# add --nojava to setupCluster call below
 
 #install opsc
 ./opscenter/install.sh 'azure'
@@ -49,6 +46,8 @@ echo password XXXXXX
 echo repouser $repouser
 echo repopw XXXXXX
 
+# add --nojava to setupCluster call below,
+# java must be installed on nodes separate from LCM
 ./lcm/setupCluster.py \
 --opscpw $opscpw \
 --clustername $cluster_name \
@@ -59,7 +58,8 @@ echo repopw XXXXXX
 --password $password \
 --dbpasswd $dbpasswd \
 --datapath "/data/cassandra" \
---nojava
+--nojava \
+--verbose
 
 # trigger install
 ./lcm/triggerInstall.py \
@@ -75,3 +75,4 @@ echo repopw XXXXXX
 sleep 30s
 ./lcm/alterKeyspaces.py \
 --opscpw $opscpw \
+--verbose
