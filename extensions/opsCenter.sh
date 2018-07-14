@@ -30,7 +30,7 @@ cd install-datastax-ubuntu-$release/bin
 ./os/install_java.sh -o
 
 # Overide OpsC install default version if needed
-export OPSC_VERSION='6.5.0'
+export OPSC_VERSION='6.5.1'
 
 #install opsc
 ./opscenter/install.sh 'azure'
