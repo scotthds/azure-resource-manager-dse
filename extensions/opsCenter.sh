@@ -72,7 +72,7 @@ echo repopw XXXXXX
 ./lcm/waitForJobs.py \
 --opscpw $opscpw
 # set keyspaces to NetworkTopology / RF 3
-sleep 30s
-./lcm/alterKeyspaces.py \
---opscpw $opscpw \
---verbose
+#sleep 30s
+#./lcm/alterKeyspaces.py \
+#--opscpw $opscpw \
+#--verbose
