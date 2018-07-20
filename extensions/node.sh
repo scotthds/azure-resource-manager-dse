@@ -40,6 +40,7 @@ tar -xvf $release.tar.gz
 
 cd install-datastax-ubuntu-$release/bin/
 # install extra packages, openjdk
+apt-get -y purge oracle-java8-*
 ./os/extra_packages.sh
 ./os/install_java.sh -o
 
