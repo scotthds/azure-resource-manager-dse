@@ -66,7 +66,9 @@ echo repopw XXXXXX
 ./lcm/triggerInstall.py \
 --opscpw $opscpw \
 --clustername $cluster_name \
---clustersize $nodecount
+--clustersize $nodecount \
+--pause 10 \
+--trys 400
 
 # Block execution while waiting for jobs to
 # exit RUNNING/PENDING status
