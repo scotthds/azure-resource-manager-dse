@@ -77,4 +77,5 @@ echo repopw XXXXXX
 #sleep 30s
 ./lcm/alterKeyspaces.py \
 --opscpw $opscpw \
+--norepair \
 --verbose
