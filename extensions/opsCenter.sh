@@ -75,5 +75,5 @@ echo repopw XXXXXX
 --opscpw $opscpw
 # set keyspaces to NetworkTopology / RF 3
 sleep 30s
-nohup ./lcm/alterKeyspaces.py \
+./lcm/alterKeyspaces.py \
 --opscpw $opscpw
