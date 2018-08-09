@@ -74,6 +74,7 @@ echo repopw XXXXXX
 ./lcm/waitForJobs.py \
 --opscpw $opscpw
 # set keyspaces to NetworkTopology / RF 3
-sleep 30s
-./lcm/alterKeyspaces.py \
---opscpw $opscpw
+
+nohup ./lcm/alterKeyspaces.py \
+--opscpw $opscpw \
+--delay 300 >> repair.log &
