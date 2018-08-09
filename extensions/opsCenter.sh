@@ -75,6 +75,7 @@ echo repopw XXXXXX
 --opscpw $opscpw
 # set keyspaces to NetworkTopology / RF 3
 
+echo "Backgrounding call to alterKeyspaces.py, writing ouput to repair.log... "
 nohup ./lcm/alterKeyspaces.py \
 --opscpw $opscpw \
---delay 300 >> repair.log &
+--delay 60 >> ../../repair.log &
