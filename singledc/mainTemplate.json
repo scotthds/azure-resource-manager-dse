@@ -80,7 +80,7 @@
     },
     "DSEVersion": {
       "type": "string",
-      "defaultValue": "6.0.1",
+      "defaultValue": "6.0.0",
       "allowedValues": [
         "6.0.0",
         "5.1.9"
@@ -91,7 +91,7 @@
     },
     "opscvmSize": {
       "type": "string",
-      "defaultValue": "Standard_D2s_v3",
+      "defaultValue": "Standard_D1_v2",
       "metadata": {
         "description": "Size of OpsCenter VM"
       }
