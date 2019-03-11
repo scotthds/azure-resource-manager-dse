@@ -11,6 +11,7 @@ if [ "$disksize" -eq "0" ]; then
    mkdir -p /data/cassandra/data
    mkdir -p /data/cassandra/commitlog
    mkdir -p /data/cassandra/saved_caches
+   mkdir -p /data/cassandra/dsefs
    chown -R cassandra:cassandra /data/cassandra
    exit;
 fi
@@ -27,4 +28,5 @@ mount -a
 mkdir -p /data/cassandra/data
 mkdir -p /data/cassandra/commitlog
 mkdir -p /data/cassandra/saved_caches
+mkdir -p /data/cassandra/dsefs
 chown -R cassandra:cassandra /data/cassandra
