@@ -91,9 +91,9 @@
     },
     "DSEVersion": {
       "type": "string",
-      "defaultValue": "6.0.0",
+      "defaultValue": "6.7.1",
       "allowedValues": [
-        "6.0.0",
+        "6.7.1",
         "5.1.11"
       ],
       "metadata": {
