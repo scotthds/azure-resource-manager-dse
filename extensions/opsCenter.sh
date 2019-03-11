@@ -23,7 +23,7 @@ echo cluster_name $cluster_name
 repouser='datastax@microsoft.com'
 repopw='3A7vadPHbNT'
 
-release="7.2.0"
+release="7.3.0"
 tar -xvf $release.tar.gz
 
 cd install-datastax-ubuntu-$release/bin
